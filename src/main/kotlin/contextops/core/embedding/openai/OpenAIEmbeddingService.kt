@@ -1,16 +1,16 @@
 package contextops.core.embedding.openai
 
-import contextops.core.embedding.EmbeddingService
+import contextops.core.embedding.model.OpenAIRequest
+import contextops.core.embedding.model.OpenAIResponse
+import contextops.core.service.EmbeddingService
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
-import io.ktor.client.request.*
 import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.request.*
 import io.ktor.serialization.kotlinx.json.*
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
 import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.Json
 
 class OpenAIEmbeddingService(
     private val apiKey: String,
@@ -40,20 +40,3 @@ class OpenAIEmbeddingService(
         return texts.map { embed(it) }
     }
 }
-
-@Serializable
-data class OpenAIRequest(
-    val model: String,
-    val input: String
-)
-
-@Serializable
-data class OpenAIResponse(
-    val data: List<EmbeddingData>
-)
-
-@Serializable
-data class EmbeddingData(
-    val embedding: List<Float>,
-    @SerialName("index") val index: Int
-)
