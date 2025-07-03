@@ -1,6 +1,6 @@
 package contextops.core.embedding.openai
 
-import contextops.core.service.EmbeddingService
+import contextops.core.embedding.EmbeddingService
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*

@@ -1,4 +1,4 @@
-package contextops.core.service
+package contextops.core.embedding
 
 interface EmbeddingService {
     fun embed(text: String): List<Float>
