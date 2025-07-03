@@ -1,0 +1,17 @@
+# Kotlin / Gradle / IntelliJ standard ignore
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+.kotlin
