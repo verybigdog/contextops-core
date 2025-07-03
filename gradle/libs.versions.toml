@@ -5,6 +5,8 @@ serialization = "1.6.3"
 junit-jupiter-engine = "5.12.1"
 commons-math3 = "3.6.1"
 guava = "33.4.5-jre"
+dotenv = "6.5.1"
+
 
 [libraries]
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
@@ -20,6 +22,8 @@ ktor-serialization-jackson = { module = "io.ktor:ktor-serialization-jackson", ve
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 commons-math3 = { module = "org.apache.commons:commons-math3", version.ref = "commons-math3" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter-engine" }
+
+dotenv-kotlin = { module = "io.github.cdimascio:dotenv-kotlin", version.ref = "dotenv" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

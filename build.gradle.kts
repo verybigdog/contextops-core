@@ -36,6 +36,7 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.ktor.serialization.jackson)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.dotenv.kotlin)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

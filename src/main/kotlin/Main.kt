@@ -1,9 +1,10 @@
 import contextops.core.embedding.openai.OpenAIEmbeddingService
 import contextops.core.search.dummy.DummySearchService
+import io.github.cdimascio.dotenv.dotenv
 
 fun main() {
-    val apiKey = System.getenv("OPENAI_API_KEY") ?: error("OPENAI_API_KEY not found")
-
+    val dotenv = dotenv()
+    val apiKey = dotenv["OPENAI_API_KEY"] ?: error("API key not found!")
     val openAi = OpenAIEmbeddingService(apiKey = apiKey)
     val dummySearch = DummySearchService()
 
