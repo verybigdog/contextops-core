@@ -8,7 +8,6 @@ import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
-import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
@@ -28,7 +27,6 @@ class OpenAIEmbeddingService(
 
     override fun embed(text: String): List<Float> = runBlocking {
         val response = client.post("https://api.openai.com/v1/embeddings") {
-            contentType(ContentType.Application.Json)
             headers {
                 append("Authorization", "Bearer $apiKey")
             }
